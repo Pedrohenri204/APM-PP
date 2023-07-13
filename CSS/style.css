@@ -11,19 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: linear-gradient(to left, rgb(0, 0, 255), rgb(2, 221, 250), rgb(108, 6, 243));
-    background-size: 500% 100%;
-    animation: degrade-animado 5s infinite alternate;
+    background-image: linear-gradient(to left, rgb(82, 4, 4), rgb(26, 2, 2), rgb(0, 0, 0));
+    background-size: 100% 500%;
 }
 
-@keyframes degrade-animado {
-    0%{
-        background-position-x: 0%;
-    }
-    100%{
-        background-position-x: 100%;
-    }
-}
 .botao{
     justify-content: flex-end;
     margin-top: 50vh;
@@ -57,7 +48,7 @@ nav.menu-lateral{
     height: 100%;
     background-color: #202020;
     padding: 40px 0 40px 1;
-    box-shadow: 3px 0 0 #ff0077;
+    box-shadow: 3px 0 0 #7e0202;
 
     position: fixed;
     top: 0;
@@ -65,7 +56,7 @@ nav.menu-lateral{
     overflow: hidden;
     transition: 0.2s;
 }
-nav.menu-lateral:hover{
+nav.menu-lateral.expandir{
     width: 300px;
 }
 .btn-expandir{
@@ -84,8 +75,12 @@ ul{
 ul li.item-menu{
     transition: 0.2s;
 }
+
+ul li.ativo{
+    background-color: #8b0202;
+}
 ul li.item-menu:hover{
-    background: #ff0077;
+    background: #8b0202;
 }
 ul li.item-menu a{
     color: #fff;
@@ -97,8 +92,85 @@ ul li.item-menu a{
     line-height: 40px;
 }
 ul li.item-menu a .txt-link{
-    margin-left: 40px;
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
 }
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
 ul li.item-menu a .icon > i{
     font-size: 30px;
+}
+
+.content{
+    width: 68%;
+    height: 643px;
+    border-radius: 75px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content .slide img{
+    height: 100%;
+    width: 100%;
+}
+
+.navegacao{
+    position: absolute;
+    bottom: 160px;
+    left: 850px;
+    display: flex;
+}
+
+.bar{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #030000;
+    margin: 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.bar:hover{
+    background-color: #020000;
+}
+
+input{
+    display: none;
+}
+
+.slides{ 
+    display: flex;
+    width: 500%;
+    height: 100%;
+
+}
+
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0%;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
 }

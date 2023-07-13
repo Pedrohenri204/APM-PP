@@ -21,30 +21,71 @@
 </div>
     <nav class="menu-lateral">
 
-        <div class="btn-expandir">
-            <i class="bi bi-list"></i>
-        </div>
-        <ul>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-house-door"></i></span>
-                    <span class="txt-link">Home</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-card-list"></i></span>
-                    <span class="txt-link">Sobre</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person-fill"></i></span>
-                    <span class="txt-link">Conta</span>
+    <div class="btn-expandir">
+        <i class="bi bi-list" id="btn-expa"></i>
+    </div>
+
+    <ul>
+        <li class="item-menu ativo">
+            <a href="#">
+                <span class="icon"><i class="bi bi-house-door"></i></span>
+                <span class="txt-link">Home</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="#">
+                <span class="icon"><i class="bi bi-card-list"></i></span>
+                <span class="txt-link">Sobre</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="file:///C:/Users/Programacao/OneDrive/Documentos/APM-PP/login.html">
+                <span class="icon"><i class="bi bi-person-fill"></i></span>
+                <span class="txt-link">Conta</span>
                 </a>
             </li>
         </ul>
     </nav>
-    
+    <!--slide-->
+
+<div class="content">
+
+    <div class="slides">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide5">
+
+        <div class="slide s1">
+            <img src="imagem/INICIAL.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="imagem/P1.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="imagem/3.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="imagem/4.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="imagem/O QUE É AAPM.png" alt="">
+        </div> 
+    </div>
+</div>
+
+<div class="navegacao">
+
+    <label class="bar" for="slide1"></label>
+    <label class="bar" for="slide2"></label>
+    <label class="bar" for="slide3"></label>
+    <label class="bar" class="bar" for="slide4"></label>
+    <label class="bar" for="slide5"></label>
+
+</div>
+
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>
